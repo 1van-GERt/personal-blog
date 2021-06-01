@@ -1,0 +1,45 @@
+.related {
+	padding-bottom: .5rem;
+
+	border-bottom: 1px #1C1C1C solid;
+}
+
+.related__list{
+	display: flex;
+	flex-wrap: wrap;
+
+	@include breakpoint($mobile-bp) {
+		flex-direction: column;
+	}
+}
+
+.related__list-title {
+	font-size: 1.4rem;
+	color: #F3EBA2;
+	font-weight: 500;
+	/*pokazivaet "..." esli vilazit za predeli bloka*/
+	text-overflow: ellipsis;
+	/*skrit` 4to vilasit za predel bloca*/
+	overflow: hidden;
+	/*zapret perenosa texta na novyu stroky*/
+	white-space: nowrap;
+
+	a {
+		color: inherit;
+		}
+}
+
+.related__list-item{
+	width: 50%;
+	margin-bottom: 2.5rem;
+
+	@include breakpoint($mobile-bp) {
+		width: 100%;
+	}
+}
+.related__list-date {
+	font-size: 1.2rem;
+	color: #828282;
+	font-weight: 400;
+}
+
